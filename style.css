@@ -931,3 +931,133 @@ footer li {
 .button:hover {
   background-color: #555; /* Slightly lighter dark brown */
 }
+
+/* Mobile phones (portrait and landscape) */
+@media (max-width: 576px) {
+  .timeline {
+    padding: 0;
+  }
+
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .timeline li .timeline-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .timeline li .timeline-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .timeline li .timeline-panel {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+/* Tablets (portrait and landscape) */
+@media (max-width: 768px) {
+  .timeline li .timeline-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .timeline li .timeline-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Laptops (portrait and landscape) */
+@media (max-width: 992px) {
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .timeline li .timeline-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Desktops and larger screens */
+@media (max-width: 1200px) {
+  .timeline li .timeline-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .timeline li .timeline-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Remove redundant or unnecessary styles */
+.timeline li .timeline-image {
+  margin: 0 auto 2rem auto;
+  padding: 10px;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.timeline li:nth-child(even) .timeline-image {
+  transform: rotate(2deg);
+}
+
+.timeline li .timeline-image:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.timeline li .timeline-image img {
+  height: calc(100% - 30px);
+  border-radius: 2px;
+}
+
+.timeline li .timeline-panel {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline li .timeline-panel .timeline-heading h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--pink);
+}
+
+.timeline li .timeline-panel .timeline-heading span {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.timeline li .timeline-panel .timeline-body p {
+  margin-bottom: 0;
+}
